@@ -1,0 +1,358 @@
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+li {
+	list-style-type: none;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+img {
+	vertical-align: top;
+}
+body {
+	min-width: 800px;
+	background: url(../img/space.jpg) 0 0 / cover no-repeat;
+}
+.container {
+	max-width: 80%;
+	margin: 0 auto;
+}
+.block {
+	width: 100%;
+	min-height: 800px;
+}
+.board {
+	position: absolute;
+	width: 550px;
+	background: #807c7c;
+	height: 230px;
+	left: 30%;
+	top: 50%;
+	border-radius: 60%;
+	border: 2px solid #000;
+}
+.board__line {
+	position: absolute;
+	width: 550px;
+	height: 230px;
+	background: #bbad66;
+	border: 1px solid black;
+	border-radius: 50%;
+	left: 0;
+	top: 5%;
+	z-index: -1;
+	box-shadow: 5px 19px 35px 4px rgb(30 165 195 / 64%);
+}
+.steel {
+	position: absolute;
+	width: 317px;
+	height: 100px;
+	border-radius: 60%;
+	border: 24px solid rgb(100, 95, 95);
+	border-top: transparent;
+	left: 21%;
+	top: 0;
+	background: #000;
+}
+.steel::after {
+	content: "";
+	position: absolute;
+	width: 317px;
+	height: 100px;
+	border: 2px solid #000;
+	background: transparent;
+	border-radius: 60%;
+	left: -24px;
+	top: 0;
+}
+.head {
+	position: absolute;
+	width: 275px;
+	height: 143px;
+	background: rgb(132 208 194);
+	border-radius: 50%;
+	left: 24%;
+	border-top-left-radius: 500px;
+	border-top-right-radius: 500px;
+	bottom: 72%;
+}
+
+.head:hover {
+	position: absolute;
+	background: rgb(132 208 194 / 50%) url("../img/Rick-And-Morty-PNG-Pic.png") 0 0 / cover no-repeat;
+
+	min-height: 100px;
+}
+.fonar {
+	position: absolute;
+	background: #bbad66;
+}
+
+.fonar__first {
+	width: 10px;
+	height: 100px;
+
+	border: 1px solid black;
+	left: 50%;
+	top: 50%;
+}
+.fonar__second {
+	width: 10px;
+	height: 100px;
+
+	border: 1px solid black;
+	left: 15%;
+	top: 31%;
+	transform: rotate(45deg);
+}
+.fonar__third {
+	width: 10px;
+	height: 100px;
+
+	border: 1px solid black;
+	left: 80%;
+	top: 32%;
+	transform: rotate(-50deg);
+}
+.board:hover {
+	background: linear-gradient(90deg, rgba(113, 124, 134, 1) 0%, rgb(134, 134, 134) 100%);
+}
+
+.board:hover .fonar {
+	background: rgb(229, 255, 0);
+}
+
+.board:hover .board__line {
+	background: rgb(226, 255, 64);
+	-webkit-box-shadow: 7px 50px 20px -6px #000000;
+	box-shadow: 7px 50px 20px -6px #d3f802;
+}
+.shleemies {
+	width: 100px;
+	height: 40px;
+	background: teal;
+	text-align: center;
+	text-transform: uppercase;
+	position: absolute;
+	left: 25%;
+	top: 61%;
+	border: 1px solid black;
+	transform: rotate(-33deg);
+}
+.lamp {
+	position: relative;
+	width: 45px;
+	height: 45px;
+	background: #2b612b;
+	border: 1px solid black;
+	left: 70%;
+	top: 68%;
+	transform: rotate(27deg);
+	padding: 0 0 0 10px;
+	border-radius: 5px;
+}
+.lamp::after {
+	content: "";
+	position: absolute;
+	width: 45px;
+	height: 45px;
+	background: rgb(150, 149, 146);
+	left: 0;
+	border-radius: 50%;
+	top: 0;
+	border: 1px solid black;
+}
+.lamp__second {
+	left: 87%;
+	top: 17%;
+}
+.circle {
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	background: white;
+	left: 71%;
+	top: 71%;
+	border: 1px solid black;
+}
+.circle__inner {
+	left: 88%;
+	top: 40%;
+}
+.circle:hover {
+	background: yellow;
+	-webkit-box-shadow: 16px 6px 29px 43px rgba(0, 0, 0, 0.64);
+	box-shadow: 16px 6px 29px 43px rgba(233, 229, 17, 0.64);
+}
+.atom {
+	position: absolute;
+	left: 40%;
+	top: 78%;
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	background: url("../img/atom.jpg") center 0 / cover no-repeat;
+}
+.flag {
+	position: relative;
+	width: 204px;
+	height: 100px;
+	background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+	text-align: center;
+	text-transform: uppercase;
+	transform: skewY(6deg);
+	font-weight: 700;
+	font-size: 50px;
+
+	line-height: 2;
+
+	border: 1px solid black;
+	bottom: 100%;
+	right: 24%;
+}
+.flag span {
+	color: rgb(48, 214, 137);
+	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+	text-shadow: 2px 1px 2px #020101;
+}
+
+.flag:hover span {
+	color: rgba(238, 174, 202, 1);
+	font-size: 70px;
+	line-height: 1.3;
+}
+
+.box {
+	position: relative;
+	width: 20px;
+	height: 20px;
+	background: #af9a9a;
+	left: 13%;
+	bottom: 43%;
+	border: 1px dashed black;
+	border-radius: 5px;
+}
+
+.box::after {
+	content: "";
+	position: absolute;
+	width: 2px;
+	height: 229px;
+	left: 0;
+	bottom: 0;
+	border: 1px dotted rgb(2, 3, 3);
+}
+.header {
+	background: green;
+	font-family: "DotGothic16";
+}
+.header__container {
+	max-width: 90%;
+	margin: 0 auto;
+}
+.header__menu {
+}
+.header__list > li:last-child {
+	font-size: 0;
+}
+.header__list > li:last-child .header__sub-list {
+	left: auto;
+	right: 0;
+}
+.header__list > li {
+	position: relative;
+	display: inline-block;
+	margin: 0px 15px 0px 0px;
+}
+.header__list > li:hover .header__sub-list {
+	display: block;
+}
+.header__list > li:hover .header__link {
+	color: yellow;
+}
+.header__list li:last-child {
+	margin-right: 0;
+}
+.header__link {
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 700;
+	padding: 10px 0;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.header__sub-list {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	min-width: 120px;
+	background-color: hotpink;
+	padding: 15px 0;
+}
+.header__sub-list > li {
+	padding: 0 10px;
+	position: relative;
+	margin: 0px 0px 7px 0px;
+}
+.header__sub-sub-list > li {
+	padding: 0px 0px 0px 15px;
+}
+.header__sub-list li {
+}
+.header__sub-list li:last-child {
+	margin-bottom: 0px;
+}
+.header__sub-link {
+	font-size: 14px;
+	color: #fff;
+}
+
+.header__sub-link:hover {
+	text-decoration: underline;
+}
+.header__sub-list > li:hover .header__sub-sub-list {
+	display: block;
+}
+.header__sub-sub-list {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 100%;
+	padding: 0 15px;
+	min-width: 150px;
+	background: greenyellow;
+}
+
+.header__sub-sub-list li {
+	margin: 0px 0px 7px 0px;
+}
+.header__sub-sub-list li:last-child {
+	margin-bottom: 0px;
+}
+.header-sub-sub-link {
+	color: #000;
+	font-size: 14px;
+}
